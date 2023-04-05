@@ -261,7 +261,8 @@
   overflow: hidden;
 }
 #chatBot.expanded {
-  height: 350px;
+  height: 450px;
+  width: 400px;
   background-color: #4caf4f00;
 }
 #chatlog {
@@ -270,6 +271,8 @@
   padding: 10px;
   height: 200px;
   overflow-y: scroll;
+  cursor: default;
+  border-radius: solid var(--highlight-text-color) 2px;
 }
 .message.user {
   background-color: #4caf50;

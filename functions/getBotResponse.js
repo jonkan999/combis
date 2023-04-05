@@ -13,7 +13,7 @@ const handler = async (event, context, callback) => {
   }
 
   const userInput = JSON.parse(event.body).userInput;
-  const promptContext = `You are an AI chatbot that can answer questions related to immigration and community services in Sweden. `;
+  const promptContext = `You are an AI chatbot that can answer questions related to immigration and community services in Sweden. Be polite and keep your answers to less than a thousand characters. `;
   const messages = [];
   messages.push({ role: "system", content: promptContext });
   messages.push({ role: "user", content: userInput });
