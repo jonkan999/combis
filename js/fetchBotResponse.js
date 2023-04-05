@@ -1,6 +1,6 @@
 export async function fetchBotResponse(userInput) {
   const response = await fetch(
-    "https://your-site-name.netlify.app/.netlify/functions/getBotResponse",
+    "https://comibs.netlify.app/.netlify/functions/getBotResponse",
     {
       method: "POST",
       headers: {
