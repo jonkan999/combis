@@ -272,7 +272,7 @@
   height: 200px;
   overflow-y: scroll;
   cursor: default;
-  border-radius: solid var(--highlight-text-color) 2px;
+  border: solid var(--highlight-text-color) 2px;
 }
 .message.user {
   background-color: #4caf50;
