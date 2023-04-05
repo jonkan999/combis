@@ -13,9 +13,9 @@ const handler = async (event, context, callback) => {
   }
 
   const userInput = JSON.parse(event.body).userInput;
-  const context = `You are an AI chatbot that can answer questions related to immigration and community services in Sweden. `;
+  const promptContext = `You are an AI chatbot that can answer questions related to immigration and community services in Sweden. `;
   const messages = [];
-  messages.push({ role: "system", content: context });
+  messages.push({ role: "system", content: promptContext });
   messages.push({ role: "user", content: userInput });
 
   try {
