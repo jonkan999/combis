@@ -250,7 +250,7 @@
   right: 4vw;
   width: 300px;
   height: 50px;
-  background-color: #4caf50;
+  background-color: #1f7a1f;
   color: white;
   font-size: 16px;
   text-align: center;
@@ -272,11 +272,11 @@
   height: 200px;
   overflow-y: scroll;
   cursor: default;
-  border: solid var(--highlight-text-color) 2px;
+  box-shadow: 0 4px 6px hsla(0, 50%, 40%, 0.3), 0 1px 3px hsla(0, 50%, 40%, 0.2);
 }
 .message.user {
-  background-color: #4caf50;
-  color: white;
+  background-color: #1f7a1f;
+  color: #f2f2f2;
   padding: 5px 10px;
   border-radius: 10px;
   margin: 0 20px 10px 0;
@@ -286,8 +286,8 @@
   text-align: left;
 }
 .message.bot {
-  background-color: #2196f3;
-  color: white;
+  background-color: #993333;
+  color: #f2f2f2;
   padding: 5px 10px;
   border-radius: 10px;
   margin: 0 0 10px 20px;
@@ -315,7 +315,7 @@ button {
   font-size: 14px;
   border: none;
   border-radius: 10px;
-  background-color: #4caf50;
+  background-color: #1f7a1f;
   color: white;
   cursor: pointer;
   font-family: Arial, sans-serif;
