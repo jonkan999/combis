@@ -332,7 +332,7 @@ button {
   width: 8px;
   height: 8px;
   margin-right: 2px;
-  background: #000;
+  background: #993333;
   border-radius: 50%;
   animation: loading-dots 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
