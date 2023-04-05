@@ -1,0 +1,101 @@
+import { fetchBotResponse } from "/js/fetchBotResponse.js";
+
+var chatBot = document.getElementById("chatBot");
+chatBot.onclick = expandChat;
+
+// create chat log container element
+var chatLog = document.createElement("div");
+chatLog.id = "chatlog";
+chatBot.appendChild(chatLog);
+
+// create bot reply message element
+const botResponse =
+  "Hello, I am the Compis.se official chat bot. How can I assist you today?";
+const botMessage = document.createElement("p");
+botMessage.classList.add("message", "bot");
+botMessage.innerHTML = botResponse;
+
+// add bot reply to chat log
+chatLog.appendChild(botMessage);
+
+function scrollToBottom() {
+  var log = document.getElementById("chatlog");
+  log.scrollTop = log.scrollHeight;
+  console.log(log.scrollHeight);
+}
+
+// create input field element
+var inputField = document.createElement("input");
+inputField.type = "text";
+inputField.id = "input";
+inputField.placeholder = "Type your message here";
+inputField.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    sendMessage();
+  }
+});
+inputField.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent default behavior
+  event.stopPropagation(); // Prevent event bubbling
+  scrollToBottom();
+});
+chatBot.appendChild(inputField);
+
+// create send button element
+var sendButton = document.createElement("button");
+sendButton.innerHTML = "Send";
+sendButton.onclick = sendMessage;
+chatBot.appendChild(sendButton);
+
+function expandChat() {
+  chatBot.classList.add("expanded");
+  chatBot.innerHTML = "";
+  chatBot.appendChild(chatLog);
+  chatBot.appendChild(inputField);
+  chatBot.appendChild(sendButton);
+  inputField.focus();
+}
+
+async function sendMessage() {
+  // get user input
+  var userInput = inputField.value;
+
+  // create user input message element
+  var userMessage = document.createElement("p");
+  userMessage.classList.add("message", "user");
+  userMessage.innerHTML = userInput;
+  chatLog.appendChild(userMessage);
+  inputField.value = "";
+
+  // send user input to server and receive response
+  try {
+    const botResponse = await fetchBotResponse(userInput);
+    var botMessage = document.createElement("p");
+    botMessage.classList.add("message", "bot");
+    botMessage.innerHTML = botResponse;
+    chatLog.appendChild(botMessage);
+    scrollToBottom();
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+/* function sendMessage() {
+  // get user input
+  var userInput = inputField.value;
+
+  // create user input message element
+  var userMessage = document.createElement("p");
+  userMessage.classList.add("message", "user");
+  userMessage.innerHTML = userInput;
+
+  // add user input message to chat log
+  chatLog.appendChild(userMessage);
+
+  // clear input field
+  inputField.value = "";
+
+  // send user input to server and receive response
+  getBotResponse(userInput);
+} */

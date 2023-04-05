@@ -1,0 +1,17 @@
+.heading-secondary {
+  text-align: right;
+}
+.article-paragraph {
+  text-align: right;
+}
+.arrow-btn {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  rotate: 180deg;
+}
+.article-link {
+  text-align: right;
+  rotate: 180deg;
+}

@@ -1,0 +1,369 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+@media (max-width: 94em) {
+  .heading-primary {
+    font-size: 5rem;
+  }
+}
+
+/**************************/
+/* BELOW 1720px (category grid breaks) */
+/**************************/
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .compis-helper-image {
+    top: -12%;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .call-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1;
+    margin: 1rem 0 0 0;
+  }
+
+  .main-nav {
+    background-color: rgba(253, 238, 231, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* z-index: -1; */
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    transition: all 0.5s ease-in;
+    z-index: 1;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  .hero-grid {
+    row-gap: 3rem;
+    column-gap: 5rem;
+  }
+
+  .hero-card {
+    width: 25rem;
+    height: 13rem;
+  }
+
+  .compis-helper-image {
+    top: -27%;
+    left: 72%;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  .hero-grid {
+    row-gap: 2rem;
+    column-gap: 3rem;
+  }
+
+  .hero-card {
+    width: 22rem;
+    height: 11rem;
+  }
+
+  .compis-helper-image {
+    top: -28%;
+    left: 65%;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-content: center;
+  }
+
+  .logo-col {
+    grid-column: 1/3;
+  }
+
+  .footer-logo {
+    margin: 0 auto 1rem auto;
+    height: 15rem;
+  }
+  .social-links {
+    margin: 0 auto 2rem auto;
+  }
+  .copyright {
+    margin: 0 auto 2rem auto;
+  }
+
+  .telefoni-vendor {
+    width: 70rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .telefoni-content-box {
+    text-align: center;
+  }
+  .telefoni-referral-text {
+    justify-content: center;
+  }
+
+  .top-choice-banner {
+    top: 5%;
+    left: 61%;
+  }
+
+  .mat-vendor {
+    width: 70rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .mat-image-box {
+    margin-top: 3rem;
+  }
+  .heading-tertiary.mat-content-header {
+    margin-bottom: 0.5rem;
+  }
+  .mat-content-box {
+    gap: 1.5rem;
+  }
+  .mat-content-description {
+    margin: 0 4rem;
+  }
+
+  .top-choice-banner-mat {
+    top: 1%;
+    left: 66%;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .header-logo {
+    margin-left: 0;
+  }
+
+  .call-box {
+    gap: 14rem;
+  }
+
+  .hero-grid {
+    row-gap: 3rem;
+    column-gap: 2rem;
+  }
+
+  .container.hero-grid {
+    padding: 0 3.2rem 0 0;
+  }
+
+  .hero-card {
+    width: 18rem;
+    height: 10rem;
+  }
+
+  .hero-card-description {
+    font-size: 2rem;
+  }
+  .icon-hero-box {
+    height: 4rem;
+    width: 4rem;
+  }
+  .icon-hero {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .compis-helper-image {
+    width: 31rem;
+    top: -7%;
+    left: 62%;
+  }
+
+  .telefoni-vendor {
+    width: 60rem;
+  }
+  .telefoni-content-description {
+    padding: 0 2rem;
+  }
+  .telefoni-referral-text {
+    justify-content: center;
+  }
+
+  .top-choice-banner {
+    left: 55%;
+  }
+
+  .mat-vendor {
+    width: 62rem;
+  }
+}
+
+/**************************/
+/* BELOW 430px ( new Phones) */
+/**************************/
+@media (max-width: 27em) {
+  .container.header-container {
+    padding: 0;
+  }
+
+  .header-logo {
+    margin-left: 0;
+  }
+
+  .call-box {
+    gap: 6.5rem;
+  }
+
+  .hero {
+    padding: 0 3.2rem 0 3.2rem;
+    height: 47rem;
+  }
+
+  .hero-description {
+    width: 40rem;
+  }
+
+  .hero-grid {
+    row-gap: 3rem;
+    column-gap: 2rem;
+  }
+
+  .container.hero-grid {
+    padding: 0 3.2rem 0 0;
+  }
+
+  .hero-card {
+    width: 16rem;
+    height: 8rem;
+  }
+
+  .hero-card-description {
+    font-size: 1.8rem;
+  }
+  .icon-hero-box {
+    height: 4rem;
+    width: 4rem;
+  }
+  .icon-hero {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .compis-helper-image {
+    width: 25rem;
+    top: 11%;
+    left: 63%;
+  }
+
+  .telefoni-vendor {
+    width: 41rem;
+  }
+  .telefoni-content-description {
+    padding: 0 2rem;
+  }
+  .telefoni-referral-text {
+    justify-content: center;
+  }
+
+  .top-choice-banner {
+    top: 2%;
+    left: 38%;
+  }
+
+  .location-filter-list {
+    gap: 2rem;
+  }
+
+  .location-filter-list-element a {
+    font-size: 2rem;
+  }
+  .mat-vendor {
+    width: 41rem;
+  }
+
+  .top-choice-banner-mat {
+    top: 1%;
+    left: 42%;
+  }
+}
