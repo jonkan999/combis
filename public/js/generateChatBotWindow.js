@@ -68,15 +68,26 @@ async function sendMessage() {
   chatLog.appendChild(userMessage);
   inputField.value = "";
 
+  // create waiting for response animation element
+  var loadingAnimation = document.createElement("div");
+  loadingAnimation.classList.add("loading-dots");
+  for (let i = 0; i < 3; i++) {
+    const dot = document.createElement("div");
+    loadingAnimation.appendChild(dot);
+  }
+  chatLog.appendChild(loadingAnimation);
+
   // send user input to server and receive response
   try {
     const botResponse = await fetchBotResponse(userInput);
+    chatLog.removeChild(loadingAnimation); // remove loading animation
     var botMessage = document.createElement("p");
     botMessage.classList.add("message", "bot");
     botMessage.innerHTML = botResponse;
     chatLog.appendChild(botMessage);
     scrollToBottom();
   } catch (error) {
+    chatLog.removeChild(loadingAnimation); // remove loading animation in case of error
     console.error(error);
   }
 }
