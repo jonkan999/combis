@@ -138,7 +138,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/public/img/hero-background.jpg");
+  background-image: url("../img/hero-background.jpg");
   background-position: center;
   background-size: cover;
   z-index: -1;
@@ -268,8 +268,8 @@
 #chatlog {
   background-color: white;
   color: black;
-  padding: 10px;
-  height: 200px;
+  /* padding: 10px; */
+  height: 300px;
   overflow-y: scroll;
   cursor: default;
   box-shadow: 0 4px 6px hsla(0, 50%, 40%, 0.3), 0 1px 3px hsla(0, 50%, 40%, 0.2);
@@ -298,7 +298,7 @@
 }
 #input {
   width: 100%;
-  height: 20%;
+  height: 12%;
   margin-bottom: 10px;
   font-size: 14px;
   padding: 5px;
