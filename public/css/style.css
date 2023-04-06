@@ -226,7 +226,8 @@
 .hero-description {
   font-size: 1.6rem;
   color: #4b1919;
-  width: 100rem;
+  /*  width: 90vw;
+  max-width: 100rem; */
   margin: 0 auto;
 
   text-align: center;
@@ -310,8 +311,8 @@
 
 #chatBot {
   position: fixed;
-  bottom: 4vh;
-  right: 4vw;
+  top: 90vh;
+  left: 80vw;
   width: 15vw;
   height: 5rem;
 

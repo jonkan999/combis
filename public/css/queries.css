@@ -109,7 +109,8 @@
   }
 
   .main-nav-link:link,
-  .main-nav-link:visited {
+  .main-nav-link:visited,
+  #languageSelector a {
     font-size: 3rem;
   }
 
@@ -228,6 +229,13 @@
     gap: 14rem;
   }
 
+  .hero {
+    padding: 0;
+  }
+
+  .heading-primary {
+    font-size: 2rem;
+  }
   .hero-grid {
     row-gap: 3rem;
     column-gap: 2rem;
@@ -238,7 +246,7 @@
   }
 
   .hero-card {
-    width: 18rem;
+    width: 20rem;
     height: 10rem;
   }
 
@@ -253,29 +261,10 @@
     height: 2.5rem;
     width: 2.5rem;
   }
-
-  .compis-helper-image {
-    width: 31rem;
-    top: -7%;
-    left: 62%;
-  }
-
-  .telefoni-vendor {
-    width: 60rem;
-  }
-  .telefoni-content-description {
-    padding: 0 2rem;
-  }
-  .telefoni-referral-text {
-    justify-content: center;
-  }
-
-  .top-choice-banner {
-    left: 55%;
-  }
-
-  .mat-vendor {
-    width: 62rem;
+  #chatBot {
+    top: 85vh;
+    left: 70vw;
+    width: 25vw;
   }
 }
 
@@ -295,31 +284,22 @@
     gap: 6.5rem;
   }
 
-  .hero {
-    padding: 0 3.2rem 0 3.2rem;
-    height: 47rem;
-  }
-
-  .hero-description {
-    width: 40rem;
-  }
-
   .hero-grid {
     row-gap: 3rem;
     column-gap: 2rem;
   }
 
   .container.hero-grid {
-    padding: 0 3.2rem 0 0;
+    padding: 0 0 0 0;
   }
 
   .hero-card {
-    width: 16rem;
+    width: 20rem;
     height: 8rem;
   }
 
   .hero-card-description {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .icon-hero-box {
     height: 4rem;
