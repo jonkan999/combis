@@ -9,8 +9,8 @@ translate_client = build("translate", "v2", developerKey=translate_api)
 
 
 # Set up paths
-blog_name_en = "index"
-blog_name_new = "arabic-compis"
+blog_name_en = "start-a-business"
+blog_name_new = "start-a-business"
 en_path = f"public/{blog_name_en}.html"
 new_lang="ar"
 new_path = f"public/{new_lang}/{blog_name_new}.html"
@@ -19,10 +19,24 @@ new_path = f"public/{new_lang}/{blog_name_new}.html"
 with open(en_path, "r" , encoding="utf8") as f:
     soup = BeautifulSoup(f, 'html.parser')
 
+# Load the JSON file
+with open('backend/start-a-business.json') as f:
+    data = json.load(f)
+
+# Find all anchor elements with ids link_1, link_2, etc.
+for i in range(1, 10):
+    anchor_id = 'link_' + str(i)
+    anchor = soup.find('a', {'id': anchor_id})
+
+    # If the anchor element exists, replace its href with the first item in the JSON array
+    if anchor:
+        anchor['href'] = data[new_lang][i-1]
+
 # Translate the text content
-for element in soup.find_all(["h1", "h2","h3", "span", "p"]):
+for element in soup.find_all(["h1", "h2", "span", "p", "a"]):
+    element_content = element.get_text()
     translation = translate_client.translations().list(
-        q=element.get_text(), target=new_lang
+        q=element_content, target=new_lang
     ).execute()
     translated_text = translation["translations"][0]["translatedText"]
     element.string = translated_text

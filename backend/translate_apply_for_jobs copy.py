@@ -11,9 +11,9 @@ translate_client = build("translate", "v2", developerKey=translate_api)
 # Set up paths
 blog_name_en = "apply-for-jobs"
 blog_name_new = "apply-for-jobs"
-en_path = f"{blog_name_en}.html"
+en_path = f"public/{blog_name_en}.html"
 new_lang="ar"
-new_path = f"{new_lang}/{blog_name_new}.html"
+new_path = f"public/{new_lang}/{blog_name_new}.html"
 
 # Read in HTML content
 with open(en_path, "r" , encoding="utf8") as f:
