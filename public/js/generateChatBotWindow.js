@@ -53,13 +53,11 @@ chatBot.appendChild(sendButton);
 function expandChat() {
   chatBot.classList.add("expanded");
   minimizeButton.classList.add("expanded");
+  chatLog.classList.add("expanded");
+  inputField.classList.add("expanded");
+  sendButton.classList.add("expanded");
   expandButton.classList.remove("expanded");
-  chatBot.innerHTML = "";
-  chatBot.appendChild(chatLog);
-  chatBot.appendChild(inputField);
-  chatBot.appendChild(sendButton);
-  chatBot.appendChild(minimizeButton);
-  inputField.focus();
+  /*  inputField.focus(); */
 }
 
 // create minimize button element
@@ -71,6 +69,9 @@ minimizeButton.onclick = minimizeChat;
 function minimizeChat() {
   chatBot.classList.remove("expanded");
   minimizeButton.classList.remove("expanded");
+  chatLog.classList.remove("expanded");
+  inputField.classList.remove("expanded");
+  sendButton.classList.remove("expanded");
   expandButton.classList.add("expanded");
 }
 
