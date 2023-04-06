@@ -10,7 +10,7 @@ translate_client = build("translate", "v2", developerKey=translate_api)
 
 # Set up paths
 blog_name_en = "index"
-blog_name_new = "arabic-compis"
+blog_name_new = "arabic-combis"
 en_path = f"public/{blog_name_en}.html"
 new_lang="ar"
 new_path = f"public/{new_lang}/{blog_name_new}.html"
