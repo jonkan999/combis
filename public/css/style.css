@@ -329,6 +329,21 @@
   width: 400px;
   background-color: #4caf4f00;
 }
+
+.minimizeButton {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  background-color: transparent;
+}
+.minimizeChatBot {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 #chatlog {
   background-color: white;
   color: black;
