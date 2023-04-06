@@ -56,6 +56,7 @@ function expandChat() {
   chatBot.appendChild(chatLog);
   chatBot.appendChild(inputField);
   chatBot.appendChild(sendButton);
+  chatBot.appendChild(minimizeButton);
   inputField.focus();
 }
 
@@ -64,7 +65,6 @@ var minimizeButton = document.createElement("button");
 minimizeButton.classList = "minimizeButton minimizeChatBot";
 minimizeButton.innerHTML = '<ion-icon name="remove-circle-outline"></ion-icon>';
 minimizeButton.onclick = minimizeChat;
-chatBot.appendChild(minimizeButton);
 
 function minimizeChat() {
   chatBot.classList.remove("expanded");
