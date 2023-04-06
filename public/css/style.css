@@ -327,6 +327,7 @@
   height: 45vh;
   width: 30vw;
   background-color: #4caf4f00;
+  overflow: visible;
 }
 
 .minimizeButton {
@@ -355,6 +356,7 @@
   height: 100%;
   width: 100%;
   font-size: 2rem;
+  color: #333;
 }
 #chatlog {
   background-color: white;
