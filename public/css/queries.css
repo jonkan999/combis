@@ -266,6 +266,10 @@
     left: 70vw;
     width: 25vw;
   }
+
+  .article-top-picture {
+    width: 100%;
+  }
 }
 
 /**************************/
