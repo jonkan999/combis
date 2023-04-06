@@ -344,6 +344,11 @@
   top: 0;
   right: 0;
 }
+
+.minimizeChatBot ion-icon {
+  height: 100%;
+  width: 100%;
+}
 #chatlog {
   background-color: white;
   color: black;
@@ -387,7 +392,7 @@
   color: #333;
   font-family: Arial, sans-serif;
 }
-button {
+.sendButton {
   width: 100%;
   height: 7%;
   font-size: 14px;

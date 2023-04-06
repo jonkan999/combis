@@ -44,6 +44,7 @@ chatBot.appendChild(inputField);
 
 // create send button element
 var sendButton = document.createElement("button");
+sendButton.classList.add("sendButton");
 sendButton.innerHTML = "Send";
 sendButton.onclick = sendMessage;
 chatBot.appendChild(sendButton);
@@ -55,15 +56,13 @@ function expandChat() {
   chatBot.appendChild(inputField);
   chatBot.appendChild(sendButton);
   inputField.focus();
-
-  const minimizeButton = document.createElement("button");
-  minimizeButton.classList = "minimizeButton";
-  minimizeButton.classList = "minimizeChatBot";
-  minimizeButton.innerHTML =
-    '<ion-icon name="remove-circle-outline"></ion-icon>';
-  minimizeButton.onclick = minimizeChat;
-  chatBot.appendChild(minimizeButton);
 }
+
+var minimizeButton = document.createElement("button");
+minimizeButton.classList = "minimizeButton minimizeChatBot";
+minimizeButton.innerHTML = '<ion-icon name="remove-circle-outline"></ion-icon>';
+minimizeButton.onclick = minimizeChat;
+chatBot.appendChild(minimizeButton);
 
 function minimizeChat() {
   chatBot.classList.remove("expanded");
