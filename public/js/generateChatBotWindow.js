@@ -1,7 +1,8 @@
 import { fetchBotResponse } from "/js/fetchBotResponse.js";
 
 var chatBot = document.getElementById("chatBot");
-chatBot.onclick = expandChat;
+var expandButton = document.getElementById("expandButton");
+expandButton.onclick = expandChat;
 
 // create chat log container element
 var chatLog = document.createElement("div");
@@ -52,6 +53,7 @@ chatBot.appendChild(sendButton);
 function expandChat() {
   chatBot.classList.add("expanded");
   minimizeButton.classList.add("expanded");
+  expandButton.classList.remove("expanded");
   chatBot.innerHTML = "";
   chatBot.appendChild(chatLog);
   chatBot.appendChild(inputField);
@@ -69,6 +71,7 @@ minimizeButton.onclick = minimizeChat;
 function minimizeChat() {
   chatBot.classList.remove("expanded");
   minimizeButton.classList.remove("expanded");
+  expandButton.classList.add("expanded");
 }
 
 async function sendMessage() {
