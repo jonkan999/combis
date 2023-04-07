@@ -68,9 +68,7 @@
     /* z-index: -1; */
     transform: translateX(100%);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
 
     /* Hide navigation */
     /* Allows NO transitions at all */
@@ -84,15 +82,57 @@
 
     /* 3) Hide it from screen readers */
     visibility: hidden;
+    overflow: hidden;
   }
 
   .nav-open .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
-    transform: translateX(0);
-    transition: all 0.5s ease-in;
+    transform: translateX(0%);
+    animation: slideIn ease 0.5s;
+    -webkit-animation: slideIn ease 0.5s;
+    -moz-animation: slideIn ease 0.5s;
+    -o-animation: slideIn ease 0.5s;
+    -ms-animation: slideIn ease 0.5s;
     z-index: 1;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .nav-close .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(100%);
+    animation: slideOut ease 0.5s;
+    -webkit-animation: slideOut ease 0.5s;
+    -moz-animation: slideOut ease 0.5s;
+    -o-animation: slideOut ease 0.5s;
+    -ms-animation: slideOut ease 0.5s;
+    z-index: 1;
+  }
+
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
   }
 
   .nav-open .icon-mobile-nav[name="close-outline"] {
@@ -111,7 +151,7 @@
   .main-nav-link:link,
   .main-nav-link:visited,
   #languageSelector a {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .hero-grid {
@@ -161,7 +201,7 @@
   }
 
   .footer-logo {
-    margin: 0 auto 1rem auto;
+    margin: 0 auto 3rem auto;
     height: 15rem;
   }
   .social-links {
