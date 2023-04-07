@@ -301,10 +301,15 @@
     height: 2.5rem;
     width: 2.5rem;
   }
+
   #chatBot {
     top: 77vh;
     left: 70vw;
     width: 25vw;
+  }
+  #chatBot.expanded {
+    left: 50vw;
+    width: 45vw;
   }
 
   .article-top-picture {
