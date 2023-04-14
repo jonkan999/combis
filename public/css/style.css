@@ -623,3 +623,7 @@
   color: var(--highlight-text-color);
   border-bottom: solid 0.2rem var(--highlight-text-color);
 }
+
+.link-padding {
+  padding: 1rem 0;
+}
