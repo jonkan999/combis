@@ -223,7 +223,7 @@
 }
 
 .hero-description {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   color: #4b1919;
   /*  width: 90vw;
   max-width: 100rem; */
@@ -595,7 +595,7 @@
 }
 
 .article-paragraph {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   line-height: 1.6;
 }
 
@@ -611,7 +611,8 @@
   font-size: 1.6rem;
 }
 .article-link {
-  text-decoration: none;
+  /* text-decoration: none; */
+  font-size: 1.9rem;
   color: var(--main-text-color);
   border-bottom: solid 0.2rem rgba(0, 0, 0, 0);
   margin-left: 1.5rem;
@@ -621,7 +622,7 @@
 
 .article-link:hover {
   color: var(--highlight-text-color);
-  border-bottom: solid 0.2rem var(--highlight-text-color);
+  /* border-bottom: solid 0.2rem var(--highlight-text-color); */
 }
 
 .link-padding {
