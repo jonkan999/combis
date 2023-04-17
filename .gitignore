@@ -5,3 +5,5 @@ temp/
 # Local Netlify folder
 .netlify
 node_modules
+old_sites
+
