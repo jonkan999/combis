@@ -26,25 +26,23 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <!-- <base href="/" /> -->
-    <script defer src="js/mobile-nav.js"></script>
+
+    <!-- <script defer src="js/mobile-nav.js"></script> -->
     <script defer src="js/script.js"></script>
-    <script defer src="js/generateFooter.js"></script>
+    <!-- 
+    <script defer src="js/generateFooter.js"></script> -->
     <script defer src="js/languageSelector.js"></script>
-    <script type="module" defer src="js/generateChatBotWindow.js"></script>
+    <script defer src="js/jobads/getFilterValues.js"></script>
 
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
 
-    <title>
-      Combis - The Societal and Consumer Information source for Immigrants: Job
-      Application, Money Transfer, Immigration Questions, and Business Start-up
-    </title>
+    <title>We have the best jobs for you, in your language! | Combis.se</title>
     <link rel="icon" href="img/favicon.png" />
     <meta
       name="description"
-      content="Our website provides essential information for immigrants on job application, international money transfer services, immigration questions, and starting a business. Get the guidance you need to succeed in your new home country."
+      content="Looking for a job? we have collected and translated all current job openings in sweden"
     />
   </head>
 
@@ -79,7 +77,7 @@
           </svg>
         </a>
 
-        <nav class="main-nav">
+        <!--  <nav class="main-nav">
           <ul class="main-nav-list">
             <li>
               <a class="main-nav-link" href="#">Societal Services</a>
@@ -92,19 +90,11 @@
                 <ion-icon class="icon-call" name="language-outline"></ion-icon>
                 <a href="#">Select Language</a>
                 <div id="languageOptions">
-                  <a class="noTranslation" href="index.html"> English</a>
-                  <a class="noTranslation" href="ar/arabic-combis.html">
-                    Arabic - عربي
-                  </a>
-                  <a class="noTranslation" href="ar/arabic-combis.html">
-                    Somali - Soomaali
-                  </a>
-                  <a class="noTranslation" href="ar/arabic-combis.html">
-                    Tigrinya - ነብሪ
-                  </a>
-                  <a class="noTranslation" href="ar/arabic-combis.html">
-                    Afghan - افغان
-                  </a>
+                  <a href="index.html"> English</a>
+                  <a href="ar/arabic-combis.html"> Arabic - عربي </a>
+                  <a href="ar/arabic-combis.html"> Somali - Soomaali </a>
+                  <a href="ar/arabic-combis.html"> Tigrinya - ነብሪ </a>
+                  <a href="ar/arabic-combis.html"> Afghan - افغان </a>
                 </div>
               </div>
             </li>
@@ -123,124 +113,51 @@
         <button class="btn-mobile-nav">
           <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
           <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-        </button>
+        </button> -->
       </div>
     </header>
     <main>
       <section class="section-hero" id="hero">
-        <div
-          class="background-img"
-          aria-label="Background image of mountains"
-        ></div>
         <div class="container">
           <div class="hero">
             <div class="hero-text-box">
               <h1 class="heading-primary heading--centered hero-heading">
-                Welcome to Combis - The Comprehensive Guide for Immigrants: Job
-                Application, International Money Transfer, Immigration and
-                Business
+                Looking for a job? We have collected all job ads for you, in
+                your language.
               </h1>
+
               <p class="hero-description">
-                Find the information you need to succeed in your new home
-                country with Combis. Our site provides guidance on job
-                applications, international money transfer services, immigration
-                questions, starting a new business and much more. We help you
-                navigate the complexities of these topics and offer practical
-                solutions to common challenges. Explore our categories below to
-                get started.
+                Here we have collected all job ads for jobs currently available
+                in Sweden, and also used AI and Google Translate to translate
+                them into your language. We hope this will make it easier for
+                you to find a job in Sweden!
               </p>
+
+              <div id="filters">
+                <h2>Job filters</h2>
+
+                <label class="job-category" for="occupation-select"
+                  >Job category:</label
+                >
+                <select id="occupation-select">
+                  <option value="">All</option>
+                </select>
+
+                <label for="region-select">Region:</label>
+                <select id="region-select">
+                  <option value="">All</option>
+                </select>
+              </div>
+
+              <div id="job-ads">
+                <!-- Job ads will be dynamically populated here -->
+              </div>
             </div>
           </div>
         </div>
-        <h2 class="heading-secondary heading--centered">Societal Services</h2>
-        <div class="container grid hero-grid grid--2-cols">
-          <a class="hero-card left-card" href="apply-for-jobs.html">
-            <div class="hero-card-content">
-              <div class="icon-hero-box">
-                <ion-icon
-                  class="icon-hero"
-                  name="person-add-outline"
-                ></ion-icon>
-              </div>
-              <h3 class="hero-card-description">Apply for jobs</h3>
-            </div>
-          </a>
-          <a class="hero-card" href="start-a-business.html">
-            <div class="hero-card-content">
-              <div class="icon-hero-box">
-                <ion-icon class="icon-hero" name="briefcase-outline"></ion-icon>
-              </div>
-              <h3 class="hero-card-description">Start a business</h3>
-            </div>
-          </a>
-          <a class="hero-card left-card" href="#">
-            <div class="hero-card-content">
-              <div class="icon-hero-box">
-                <ion-icon class="icon-hero" name="globe-outline"></ion-icon>
-              </div>
-              <h3 class="hero-card-description">Immigrate to Sweden</h3>
-            </div>
-          </a>
-          <a class="hero-card" href="/jobads.html">
-            <div class="hero-card-content">
-              <div class="icon-hero-box">
-                <ion-icon
-                  class="icon-hero"
-                  name="accessibility-outline"
-                ></ion-icon>
-              </div>
-              <h3 class="hero-card-description">Job ads</h3>
-            </div>
-          </a>
-        </div>
-        <h2 class="heading-secondary heading--centered">Consumer Services</h2>
-        <div class="container grid hero-grid grid--2-cols">
-          <a class="hero-card left-card" href="telefoni.html">
-            <div class="hero-card-content">
-              <div class="icon-hero-box">
-                <ion-icon class="icon-hero" name="cash-outline"></ion-icon>
-              </div>
-              <h3 class="hero-card-description">
-                International money transfers
-              </h3>
-            </div>
-          </a>
-          <a class="hero-card" href="#">
-            <div class="hero-card-content">
-              <div class="icon-hero-box">
-                <ion-icon class="icon-hero" name="car-outline"></ion-icon>
-              </div>
-              <h3 class="hero-card-description">Buy a car</h3>
-            </div>
-          </a>
-          <a class="hero-card left-card" href="#">
-            <div class="hero-card-content">
-              <div class="icon-hero-box">
-                <ion-icon
-                  class="icon-hero"
-                  name="document-text-outline"
-                ></ion-icon>
-              </div>
-              <h3 class="hero-card-description">Car insurance</h3>
-            </div>
-          </a>
-          <a class="hero-card" href="mat.html">
-            <div class="hero-card-content">
-              <div class="icon-hero-box">
-                <ion-icon
-                  class="icon-hero"
-                  name="phone-portrait-outline"
-                ></ion-icon>
-              </div>
-              <h3 class="hero-card-description">Call internationally</h3>
-            </div>
-          </a>
-        </div>
       </section>
     </main>
-    <section id="chatBot">
-      <button id="expandButton" class="expanded">Chat with us</button>
-    </section>
+
     <footer id="footer" class="section-footer"></footer>
   </body>
 </html>
