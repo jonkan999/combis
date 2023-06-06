@@ -21,6 +21,7 @@ body {
 :root {
   --main-text-color: #4b1919;
   --highlight-text-color: #af3939;
+  --white-background-color: #fff;
 }
 
 /***************************** */

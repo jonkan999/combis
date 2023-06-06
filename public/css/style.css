@@ -656,6 +656,31 @@
   line-height: 1.1;
 }
 
+.big-header {
+  font-size: 2.5rem;
+}
+
+.article-link-box {
+  border-top: var(--highlight-text-color) solid 0.2rem;
+  padding-top: 1rem;
+}
+
+.article-link-box:hover,
+.article-link-box:active {
+  cursor: pointer;
+}
+
+.article-link-box:hover h3,
+.article-link-box:active h3 {
+  text-decoration: underline;
+  color: #222;
+}
+
+.news-article-link {
+  text-decoration: none;
+  color: #555;
+}
+
 #job-ads hr {
   margin: 1rem 0;
 }
