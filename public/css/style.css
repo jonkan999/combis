@@ -663,6 +663,7 @@
 .article-link-box {
   border-top: var(--highlight-text-color) solid 0.2rem;
   padding-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 .article-link-box:hover,
