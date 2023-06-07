@@ -581,7 +581,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .article-tags {
@@ -655,7 +655,6 @@
   font-size: 1.7rem;
   line-height: 1.1;
 }
-
 
 .big-header {
   font-size: 2.5rem;
